@@ -77,4 +77,4 @@ This section highlights the most critical vulnerability identified in the `captu
 
 ---
 
-**Would you like me to help you write a summary of this project for your resume or portfolio?**
+
