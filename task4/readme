@@ -1,0 +1,54 @@
+# Task 4: Password Security & Authentication Analysis
+## 🛡️ Cyber Security Internship Submission
+
+### 📋 Project Overview
+This project focuses on the analysis of password storage mechanisms, the identification of cryptographic hashes, and the practical application of password recovery tools. Through hands-on labs, I demonstrated how to audit authentication security by identifying and cracking various hash types.
+
+---
+
+### 🛠️ Tools & Environments Used
+* **Learning Platform:** TryHackMe
+* **Primary Tools:** Hashcat, John the Ripper (JTR)
+* **Alternative Tools:** Online Hash Identifiers
+* **Wordlist:** `rockyou.txt`
+
+---
+
+### 🧪 Practical Lab: TryHackMe "Crack the Hash"
+I successfully completed the **Crack the Hash** challenge, which required identifying and cracking hashes of increasing complexity.
+
+#### **Cracking Methodology**
+1. **Identification:** Used length and character patterns to identify MD5 (32-bit), SHA-1 (40-bit), and bcrypt ($2y$) hashes.
+2. **Dictionary Attack:** Leveraged `rockyou.txt` to find common passwords.
+3. **Salting Analysis:** Cracked SHA-512 salted hashes, demonstrating how added random data (salts) protects passwords.
+
+#### **Key Successes:**
+* **Level 1:** Recovered passwords "easy", "password123", and "letmein".
+* **Level 2:** Successfully cracked salted hashes like "waka99" and numeric strings.
+
+---
+
+### 📸 Proof of Work (Evidence)
+
+#### **1. Challenge Completion (100%)**
+![THM Completion](screenshots/thm_completion_badge.png)
+*Evidence of completing all hashing challenges on TryHackMe.*
+
+#### **2. Level 1 Crack Results**
+![Level 1](screenshots/level_1_cracks.png)
+*Successful recovery of MD5, SHA-1, and SHA-256 hashes.*
+
+#### **3. Level 2 Salted Hash Results**
+![Level 2](screenshots/level_2_salted_hashes.png)
+*Successful recovery of complex salted hashes and HMAC results.*
+
+---
+
+### 🔍 Security Recommendations
+* **Avoid Weak Algorithms:** Deprecate MD5 and SHA-1 as they are vulnerable to rapid cracking.
+* **Implement Salting:** Always use unique salts to prevent the use of precomputed Rainbow Tables.
+* **Multi-Factor Authentication (MFA):** Enforce MFA to provide a secondary layer of defense even if a password is compromised.
+* **Slow Hashing:** Use algorithms like **bcrypt** or **Argon2** which are computationally expensive to brute force.
+
+
+
